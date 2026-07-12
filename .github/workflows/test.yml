@@ -1,0 +1,20 @@
+name: Python Application Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-python: '3.10'
+
+    - name: Run Test Suite
+      run: |
+        echo "Running calculator unit tests..."
+        exit 1
